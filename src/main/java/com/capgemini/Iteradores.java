@@ -1,13 +1,17 @@
 package com.capgemini;
 
 public class Iteradores {
-	private char[] s;
+	public static void main(String[] args) {
+		Iteradores test = new Iteradores();
+		//test.EjemploRedimensionar();
+		//test.createArray();
+		test.imprimoNombreASCII();
+	}
 
 	public boolean usoFor(int[] a, int[] b) {
 		if (a.equals(b)) {
-// usar estos datos para el TEST
-// int[] a=new int[10];
-// int b[]=new int[10];
+			// int[] a=new int[10];
+			// int b[]=new int[10];
 			for (int i = 0; i < a.length; i++) {
 				a[i] = i;
 				System.out.println(a[i]);
@@ -35,23 +39,27 @@ public class Iteradores {
 		return true;
 	}
 
-	public void EjemploRedimensionar(int[] myArray, int[] hold) {
-// usar estos datos para el TEST
-//original array
-// int[] myArray = { 1, 2, 3, 4, 5, 6 };
-// new larger array
-// int[] hold = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
-// copy all of the myArray array to the hold
-// array, starting with the 0th index
-		System.arraycopy(myArray, 0, hold, 0, myArray.length);
-		for (int i = 0; i < hold.length; i++) {
-			System.out.print(hold[i]);
+	public boolean EjemploRedimensionar(int[] myArray, int[] hold) {
+		//original array
+		//int[] myArray = { 1, 2, 3, 4, 5, 6 };
+		// new larger array
+		//int[] hold = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
+		// copy all of the myArray array to the hold
+		// array, starting with the 0th index
+		if (myArray.equals(hold)) {
+			return false;
+		} else {
+			System.arraycopy(myArray, 0, hold, 0, myArray.length);
+			for (int i = 0; i < hold.length; i++) {
+				System.out.print(hold[i]);
+				return true;
+			}
 		}
+		return false;
 	}
 
 	public char[] createArray(char[] s) {
-// usar estos datos para el TEST
-// s = new char[26];
+		s = new char[26];
 		System.out.println((int) 'A');
 		for (int i = 0; i < 26; i++) {
 			s[i] = (char) ('A' + i);
