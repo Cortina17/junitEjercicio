@@ -37,6 +37,7 @@ public class Iteradores {
 	public void EjemploRedimensionar(int[] myArray, int[] hold) {
 
 		System.arraycopy(myArray, 0, hold, 0, myArray.length);
+		
 		for (int i = 0; i < hold.length; i++) {
 			System.out.print(hold[i]);
 		}
@@ -45,6 +46,7 @@ public class Iteradores {
 	public char[] createArray(char[] s) {
 
 		System.out.println((int) 'A');
+		
 		for (int i = 0; i < 26; i++) {
 			s[i] = (char) ('A' + i);
 			System.out.println(s[i]);
@@ -59,8 +61,10 @@ public class Iteradores {
 			nombreAscii[i] = (int) nombre[i];
 			System.out.print((int) nombre[i] + " ");
 		}
+		
 		System.out.println();
 		System.out.println("*************");
+		
 		for (int i = 0; i < nombreAscii.length; i++) {
 			System.out.println(nombreAscii[i]);
 		}
