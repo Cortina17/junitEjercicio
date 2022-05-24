@@ -8,17 +8,17 @@ class IteradoresTest {
 
 	@Test
 	void testUsoFor() {
-
+		
 		int[] a = new int[10];
 		int[] b = new int[10];
+		
+		assertEquals(a,b);
 
-		fail("Not yet implemented");
 	}
 
 	@Test
 	void testEjemploRedimensionar() {
 
-		// usar estos datos para el TEST
 		// original array
 		// int[] myArray = { 1, 2, 3, 4, 5, 6 };
 		// new larger array
@@ -32,7 +32,6 @@ class IteradoresTest {
 	@Test
 	void testCreateArray() {
 
-		// usar estos datos para el TEST
 		// s = new char[26];
 
 		fail("Not yet implemented");
