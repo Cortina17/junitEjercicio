@@ -8,16 +8,16 @@ class IteradoresTest {
 
 	@Test
 	void testUsoFor() {
-		
+
 		int[] a = new int[10];
 		int[] b = new int[10];
-		
-		assertEquals(a,b);
+
+		assertTrue(a != b);
 
 	}
 
 	@Test
-	void testEjemploRedimensionar() {
+	void testEjemploRedimensionar(int[] myArray, int [] hold) {
 
 		// original array
 		// int[] myArray = { 1, 2, 3, 4, 5, 6 };
@@ -26,7 +26,7 @@ class IteradoresTest {
 		// copy all of the myArray array to the hold
 		// array, starting with the 0th index
 
-		fail("Not yet implemented");
+		assertTrue(myArray==hold);
 	}
 
 	@Test

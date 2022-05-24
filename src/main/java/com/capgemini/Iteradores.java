@@ -1,17 +1,17 @@
 package com.capgemini;
 
 public class Iteradores {
+
 	public static void main(String[] args) {
+
 		Iteradores test = new Iteradores();
-		//test.EjemploRedimensionar();
-		//test.createArray();
-		test.imprimoNombreASCII();
+		// test.EjemploRedimensionar();
+		// test.createArray();
+		// test.imprimoNombreASCII();
 	}
 
 	public boolean usoFor(int[] a, int[] b) {
-		if (a.equals(b)) {
-			// int[] a=new int[10];
-			// int b[]=new int[10];
+		if (a.length == b.length) {
 			for (int i = 0; i < a.length; i++) {
 				a[i] = i;
 				System.out.println(a[i]);
@@ -40,12 +40,7 @@ public class Iteradores {
 	}
 
 	public boolean EjemploRedimensionar(int[] myArray, int[] hold) {
-		//original array
-		//int[] myArray = { 1, 2, 3, 4, 5, 6 };
-		// new larger array
-		//int[] hold = { 10, 9, 8, 7, 6, 5, 4, 3, 2, 1 };
-		// copy all of the myArray array to the hold
-		// array, starting with the 0th index
+		// if (myArray.equals(hold)) {
 		if (myArray.equals(hold)) {
 			return false;
 		} else {
