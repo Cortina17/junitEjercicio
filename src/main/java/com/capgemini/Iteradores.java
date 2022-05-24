@@ -9,17 +9,23 @@ public class Iteradores {
 			a[i] = i;
 			System.out.println(a[i]);
 		}
+		
 		System.out.println("-------");
+		
 		for (int i = 9; i > 0; i--) {
 			b[i] = i;
 			System.out.println(b[i]);
 		}
+		
 		System.out.println("-------");
+		
 		for (int i = 0; i < 10; i += 2) {
 			b[i] = i;
 			System.out.println(b[i]);
 		}
+		
 		System.out.println("-------");
+		
 		int x = (int) (Math.random() * 100);
 		for (int i = 0; i < a.length; i++) {
 			a[i] = x;
