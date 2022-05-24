@@ -3,32 +3,51 @@ package com.capgemini;
 public class Proveedor {
 	private String[] productos;
 
-	// @Overload sobre el metodo BUSCAR
-	public void buscar(Object o) {
+	//@Overload sobre el metodo BUSCAR
+	public boolean buscar(Object o) {
 		if (o instanceof Integer) {
 			System.out.println("estoy buscando x cantidad");
+			return buscar((Integer) o);
 		}
 		if (o instanceof String) {
 			System.out.println("estoy buscando x nombre");
+			return buscar((String) o);
 		}
 		if (o.equals(null)) {
-			System.out.println("estoy buscando todo");
+			return buscar();
 		}
+		return false;
 	}
 
-	public void buscar() {
+	public boolean buscar() {
 		System.out.println("estoy buscando todo");
+		return true;
 	}
 
-	public void buscar(String nombre) {
+	public boolean buscar(String nombre) {
+		if (nombre == null) {
+			System.out.println("estoy buscando nombre NULL ");
+			return false;
+		}
 		System.out.println("estoy buscando x nombre");
+		return true;
 	}
 
-	public void buscar(int cantidad) {
+	public boolean buscar(int cantidad) {
+		if (cantidad < 0) {
+			System.out.println("estoy buscando x cantidad NEGATIVA");
+			return false;
+		}
 		System.out.println("estoy buscando x cantidad");
+		return true;
 	}
 
-	public void buscar(String nombre, int cantidad) {
+	public boolean buscar(String nombre, int cantidad) {
+		if (nombre == null && cantidad != 0) {
+			System.out.println("estoy buscando nombre NULL y cantidad en cero");
+			return false;
+		}
 		System.out.println("estoy buscando nombre y x cantidad");
+		return true;
 	}
 }
