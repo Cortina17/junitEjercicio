@@ -9,8 +9,8 @@ class IteradoresTest {
 	@Test
 	void testUsoFor() {
 
-		// int[] a=new int[10];
-		// int b[]=new int[10];
+		int[] a = new int[10];
+		int[] b = new int[10];
 
 		fail("Not yet implemented");
 	}
